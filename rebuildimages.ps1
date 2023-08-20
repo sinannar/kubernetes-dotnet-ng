@@ -12,5 +12,5 @@ docker rmi demoapi
 docker build -t demoapp -f demoapp.dockerfile .
 docker build -t demoapi -f demoapi.dockerfile .
 
-docker run -d -p 30100:80 --name demoapicontainer demoapi
-docker run -d -p 30200:80 --name demoappcontainer demoapp
+# docker run -d -p 30100:80 --name demoapicontainer demoapi
+# docker run -d -p 30200:80 --name demoappcontainer demoapp
