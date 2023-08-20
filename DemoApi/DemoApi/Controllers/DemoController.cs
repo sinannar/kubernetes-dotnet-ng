@@ -13,7 +13,7 @@ public class DemoController : ControllerBase
     }
 
     [HttpGet]
-    public String Get()
+    public string Get()
     {
         return "Hello World";
     }
