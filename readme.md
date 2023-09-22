@@ -8,4 +8,10 @@
 
 
 ##
+- [](https://kubernetes.io/docs/concepts/services-networking/)
+- [](https://helm.sh/docs/intro/install/)
+- [](https://kubernetes.io/docs/concepts/services-networking/ingress/#ingress-class)
+- [](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
+- [](https://kubernetes.io/docs/concepts/containers/images/)
+- [](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)
 
