@@ -7,7 +7,7 @@ $jobSpaPortForward = Start-Job -ScriptBlock {
     kubectl port-forward deployment/demoapp-deployment 30200:80
 }
 
-echo $jobApiPortForward
-echo $jobSpaPortForward
+Write-Output $jobApiPortForward
+Write-Output $jobSpaPortForward
 
 # Remove-Job -Name Job13 -Force

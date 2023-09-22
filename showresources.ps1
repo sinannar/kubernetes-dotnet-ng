@@ -1,15 +1,15 @@
-echo 'kubectl get pods'
+Write-Output 'kubectl get pods'
 kubectl get pods
-echo ''
-echo 'kubectl get services'
+Write-Output ''
+Write-Output 'kubectl get services'
 kubectl get services
-echo ''
-echo 'kubectl get deployments'
+Write-Output ''
+Write-Output 'kubectl get deployments'
 kubectl get deployments
-echo ''
-echo 'kubectl get ingress'
+Write-Output ''
+Write-Output 'kubectl get ingress'
 kubectl get ingress
-echo ''
+Write-Output ''
 
 
 # kubectl -n ingress-nginx get pods
