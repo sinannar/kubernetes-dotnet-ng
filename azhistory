@@ -1,0 +1,23 @@
+rg name : demokubernetesrg
+cr name : demokubernetescontainerregistry
+aks nam : demokubernetescluster
+
+az group create --name demokubernetesrg --location eastus
+az acr create --resource-group demokubernetesrg --name demokubernetescontainerregistry --sku Basic
+az acr login --name demokubernetescontainerregistry
+az acr update --name demokubernetescontainerregistry --admin-enabled true
+
+docker login demokubernetescontainerregistry.azurecr.io
+
+docker tag demoapi:v2 demokubernetescontainerregistry.azurecr.io/demoapi:v2
+docker push demokubernetescontainerregistry.azurecr.io/demoapi:v2
+
+docker tag demoapp:v2 demokubernetescontainerregistry.azurecr.io/demoapp:v2
+docker push demokubernetescontainerregistry.azurecr.io/demoapp:v2
+
+
+az aks create -g demokubernetesrg -n demokubernetescluster --node-count 1 --generate-ssh-keys --attach-acr demokubernetescontainerregistry
+
+az aks install-cli
+az aks get-credentials -g demokubernetesrg -n demokubernetescluster
+kubectl get nodes
